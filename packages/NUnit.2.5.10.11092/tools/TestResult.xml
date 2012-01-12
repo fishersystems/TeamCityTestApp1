@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="c:\Source\TeamCity Test App 1\TeamCityTestApp1\BuildOutput\TeamCityTestApp1.Tests.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-01-11" time="17:15:28">
+  <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.5420" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="c:\Source\TeamCity Test App 1\TeamCityTestApp1\packages\NUnit.2.5.10.11092\tools" machine-name="TFS11" user="Admin" user-domain="TFS11" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="c:\Source\TeamCity Test App 1\TeamCityTestApp1\BuildOutput\TeamCityTestApp1.Tests.dll" executed="True" result="Success" success="True" time="0.172" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="TeamCityTestApp1" executed="True" result="Success" success="True" time="0.094" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="0.094" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="Addertests" executed="True" result="Success" success="True" time="0.094" asserts="0">
+                <results>
+                  <test-case name="TeamCityTestApp1.Tests.Addertests.add_test" executed="True" result="Success" success="True" time="0.078" asserts="1" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

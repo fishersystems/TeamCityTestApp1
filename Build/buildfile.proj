@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Compile" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+    <PropertyGroup>
+        <SolutionDir>..</SolutionDir>
+        <SpecificSolutionToBuild></SpecificSolutionToBuild>
+        <NUnitToolsDir>..\packages\NUnit.2.5.10.11092\tools</NUnitToolsDir>
+        <OutputDir>..\BuildOutput</OutputDir>
+        <BuildDir>..\Build</BuildDir>
+    </PropertyGroup>
+    <!--<Choose>
+        <When Condition=" '$(SpecificSolutionToBuild)' == '' ">
+            <ItemGroup>
+                <SolutionsToBuild Include="$(SolutionDir)\TeamCityTestApp1.sln" />
+                <SolutionsToBuild Include="$(SolutionDir)\TeamCityTestApp1Alternate.sln" />
+            </ItemGroup>
+        </When>
+        <Otherwise>
+            <ItemGroup>
+                <SolutionsToBuild Include="$(SolutionDir)\$(SpecificSolutionToBuild)" />
+            </ItemGroup>
+        </Otherwise>
+    </Choose>-->
+
+    <ItemGroup>
+        <SolutionsToBuild Include="$(SolutionDir)\TeamCityTestApp1.sln" />
+    </ItemGroup>
+    <ItemGroup>
+        <FilesInOutputDir Include="$(OutputDir)\*"></FilesInOutputDir>
+    </ItemGroup>
+    
+    <Target Name="CleanOutputPath">
+        <Delete Files="@(FilesInOutputDir)" />
+    </Target>
+    
+    <Target Name="Compile" DependsOnTargets="CleanOutputPath" AfterTargets="RunUnitTests">
+        <MSBuild Projects="@(SolutionsToBuild)" Properties="OutputPath=$(OutputDir);Configuration=Release;DebugType=none;" />
+    </Target>
+
+    <Target Name="RunUnitTests" DependsOnTargets="Compile">
+        <ItemGroup>
+            <AssembliesToTest Include="$(OutputDir)\TeamCityTestApp1.Tests.dll" />
+        </ItemGroup>
+        <NUnit ToolPath="$(NUnitToolsDir)" 
+               DisableShadowCopy="true" 
+               Assemblies="@(AssembliesToTest)" 
+               OutputXmlFile="$(BuildDir)\UnitTestResults.xml"/>
+    </Target>
+</Project>

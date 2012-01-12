@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" InitialTargets="ValidateSolutionConfiguration;ValidateToolsVersions;ValidateProjects">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore\*" Condition="'$(ImportByWildcardBeforeSolution)' != 'false' and exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore')" />
+  <Import Project="C:\Source\TeamCity Test App 1\TeamCityTestApp1\before.TeamCityTestApp1.sln.targets" Condition="exists('C:\Source\TeamCity Test App 1\TeamCityTestApp1\before.TeamCityTestApp1.sln.targets')" />
+  <PropertyGroup Condition=" '$(Configuration)' == '' ">
+    <Configuration>Debug</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == '' ">
+    <Platform>Mixed Platforms</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(AspNetConfiguration)' == '') ">
+    <AspNetConfiguration>$(Configuration)</AspNetConfiguration>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SolutionDir>C:\Source\TeamCity Test App 1\TeamCityTestApp1\</SolutionDir>
+    <SolutionExt>.sln</SolutionExt>
+    <SolutionFileName>TeamCityTestApp1.sln</SolutionFileName>
+    <SolutionName>TeamCityTestApp1</SolutionName>
+    <SolutionPath>C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.sln</SolutionPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and '$(MSBuildToolsVersion)' == '2.0'">v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and ('$(MSBuildToolsVersion)' == '3.5' or '$(MSBuildToolsVersion)' == '3.0')">v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and '$(MSBuildToolsVersion)' == '4.0'">v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{070A5008-4C07-4B84-9F23-CCE90124FC73}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1\TeamCityTestApp1.csproj" BuildProjectInSolution="True">Debug|x86</ProjectConfiguration>
+  <ProjectConfiguration Project="{340F2AEE-2887-42F2-A186-06AF2998AF6E}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.Tools\TeamCityTestApp1.Tools.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{FD7F189E-6DBE-4919-9E83-C4095F4C39C0}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.Tests\TeamCityTestApp1.Tests.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Mixed Platforms') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{070A5008-4C07-4B84-9F23-CCE90124FC73}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1\TeamCityTestApp1.csproj" BuildProjectInSolution="True">Debug|x86</ProjectConfiguration>
+  <ProjectConfiguration Project="{340F2AEE-2887-42F2-A186-06AF2998AF6E}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.Tools\TeamCityTestApp1.Tools.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{FD7F189E-6DBE-4919-9E83-C4095F4C39C0}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.Tests\TeamCityTestApp1.Tests.csproj" BuildProjectInSolution="True">Debug|AnyCPU</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{070A5008-4C07-4B84-9F23-CCE90124FC73}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1\TeamCityTestApp1.csproj" BuildProjectInSolution="True">Debug|x86</ProjectConfiguration>
+  <ProjectConfiguration Project="{340F2AEE-2887-42F2-A186-06AF2998AF6E}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.Tools\TeamCityTestApp1.Tools.csproj" BuildProjectInSolution="False">Debug|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{FD7F189E-6DBE-4919-9E83-C4095F4C39C0}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.Tests\TeamCityTestApp1.Tests.csproj" BuildProjectInSolution="False">Debug|AnyCPU</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{070A5008-4C07-4B84-9F23-CCE90124FC73}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1\TeamCityTestApp1.csproj" BuildProjectInSolution="True">Release|x86</ProjectConfiguration>
+  <ProjectConfiguration Project="{340F2AEE-2887-42F2-A186-06AF2998AF6E}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.Tools\TeamCityTestApp1.Tools.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{FD7F189E-6DBE-4919-9E83-C4095F4C39C0}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.Tests\TeamCityTestApp1.Tests.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Mixed Platforms') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{070A5008-4C07-4B84-9F23-CCE90124FC73}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1\TeamCityTestApp1.csproj" BuildProjectInSolution="True">Release|x86</ProjectConfiguration>
+  <ProjectConfiguration Project="{340F2AEE-2887-42F2-A186-06AF2998AF6E}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.Tools\TeamCityTestApp1.Tools.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{FD7F189E-6DBE-4919-9E83-C4095F4C39C0}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.Tests\TeamCityTestApp1.Tests.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{070A5008-4C07-4B84-9F23-CCE90124FC73}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1\TeamCityTestApp1.csproj" BuildProjectInSolution="True">Release|x86</ProjectConfiguration>
+  <ProjectConfiguration Project="{340F2AEE-2887-42F2-A186-06AF2998AF6E}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.Tools\TeamCityTestApp1.Tools.csproj" BuildProjectInSolution="False">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{FD7F189E-6DBE-4919-9E83-C4095F4C39C0}" AbsolutePath="C:\Source\TeamCity Test App 1\TeamCityTestApp1\TeamCityTestApp1.Tests\TeamCityTestApp1.Tests.csproj" BuildProjectInSolution="False">Release|AnyCPU</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter\*" Condition="'$(ImportByWildcardBeforeSolution)' != 'false' and exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter')" />
+  <Import Project="C:\Source\TeamCity Test App 1\TeamCityTestApp1\after.TeamCityTestApp1.sln.targets" Condition="exists('C:\Source\TeamCity Test App 1\TeamCityTestApp1\after.TeamCityTestApp1.sln.targets')" />
+  <Target Name="Build" />
+  <Target Name="Rebuild" />
+  <Target Name="Clean" />
+  <Target Name="Publish" />
+</Project>
