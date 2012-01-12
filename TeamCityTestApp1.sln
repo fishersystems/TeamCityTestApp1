@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamCityTestApp1", "TeamCityTestApp1\TeamCityTestApp1.csproj", "{070A5008-4C07-4B84-9F23-CCE90124FC73}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{2D765B0F-1BCE-446C-A002-B0A37D19CDCE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildFiles", "BuildFiles", "{2D765B0F-1BCE-446C-A002-B0A37D19CDCE}"
 	ProjectSection(SolutionItems) = preProject
 		Build\buildfile.proj = Build\buildfile.proj
 	EndProjectSection
