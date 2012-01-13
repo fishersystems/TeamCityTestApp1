@@ -4,9 +4,9 @@
     <PropertyGroup>
         <SolutionDir>..</SolutionDir>
         <SpecificSolutionToBuild></SpecificSolutionToBuild>
-        <NUnitToolsDir>..\packages\NUnit.2.5.10.11092\tools</NUnitToolsDir>
-        <OutputDir>..\BuildOutput</OutputDir>
-        <BuildDir>..\Build</BuildDir>
+        <NUnitToolsDir>$(SolutionDir)\packages\NUnit.2.5.10.11092\tools</NUnitToolsDir>
+        <OutputDir>$(SolutionDir)\BuildOutput</OutputDir>
+        <BuildDir>.</BuildDir>
     </PropertyGroup>
     <!--<Choose>
         <When Condition=" '$(SpecificSolutionToBuild)' == '' ">
