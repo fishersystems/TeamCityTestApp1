@@ -2,3 +2,4 @@
 *bin*
 *obj*
 Build/UnitTestResults.xml
+BuildOutput/*
